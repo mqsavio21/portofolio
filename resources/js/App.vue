@@ -182,9 +182,9 @@
     <footer class="py-12 bg-gray-800 text-white">
       <div class="max-w-6xl mx-auto px-4 text-center">
         <div class="flex justify-center space-x-6 mb-8">
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin text-2xl"></i></a>
-          <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter text-2xl"></i></a>
+          <a href="https://github.com/mqsavio21" class="hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
+          <a href="https://www.linkedin.com/in/mqsaviovp/" class="hover:text-blue-400"><i class="fab fa-linkedin text-2xl"></i></a>
+          <a href="https://www.instagram.com/mqsavio21/" class="hover:text-blue-400"><i class="fab fa-instagram text-2xl"></i></a>
         </div>
         <p class="text-gray-400">Living, learning, & leveling up one day at a time.</p>
         <p class="mt-4 text-sm text-gray-500">Handcrafted by me © 2024</p>
