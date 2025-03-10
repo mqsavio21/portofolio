@@ -26,8 +26,7 @@
         <p class="text-xl md:text-2xl text-gray-600 mb-12">
           I design and code beautifully simple things, and I love what I do.
         </p>
-        <img src="https://via.placeholder.com/200" alt="Profile" class="rounded-full w-48 h-48 mx-auto mb-12 shadow-lg"/>
-        <div class="wave-pattern h-32 bg-gray-100"></div>
+        <img src="/images/official.jpg" alt="Profile" class="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto mb-12 shadow-lg object-cover border-4 border-white"/>
       </div>
     </section>
 
