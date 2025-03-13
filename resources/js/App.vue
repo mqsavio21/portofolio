@@ -559,7 +559,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20">
+    <section class="py-20 hidden">
       <div class="max-w-4xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Testimonials</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -579,7 +579,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-blue-500 text-white">
+    <section id="contact" class="hidden py-20 bg-blue-500 text-white">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold mb-6">Interested in collaborating with me?</h2>
         <p class="text-xl mb-8">I'm always open to discussing product design work or partnership opportunities.</p>
