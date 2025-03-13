@@ -7,7 +7,7 @@
           <div class="flex flex-col md:flex-row gap-8 items-center px-4">
             <!-- Left side - Image -->
             <div class="w-full md:w-1/2">
-              <div class="group relative overflow-hidden rounded-xl shadow-xl hover:shadow-[0_20px_50px_rgba(74,_85,_104,_0.7)] transition-shadow duration-300 bg-white">
+              <div class="group relative overflow-hidden rounded-xl bg-white">
                 <img 
                   :src="project.image" 
                   :alt="project.title" 
@@ -34,15 +34,15 @@
             </div>
             <!-- Right side - Content -->
             <div class="w-full md:w-1/2">
-              <h3 class="text-2xl font-bold text-gray-800 mb-4">{{ project.title }}</h3>
-              <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">{{ project.title }}</h3>
+              <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 {{ project.description }}
               </p>
               <div class="flex flex-wrap gap-2">
                 <span 
                   v-for="(tech, techIndex) in project.technologies" 
                   :key="techIndex"
-                  class="px-4 py-1 bg-gray-200 rounded-full text-sm font-medium text-gray-800"
+                  class="px-4 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-800 dark:text-gray-300"
                 >
                   {{ tech }}
                 </span>
@@ -56,17 +56,17 @@
     <!-- Navigation Buttons -->
     <button 
       @click="prevSlide" 
-      class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300"
+      class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white dark:bg-gray-700 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-300"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
     </button>
     <button 
       @click="nextSlide" 
-      class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition-colors duration-300"
+      class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white dark:bg-gray-700 p-3 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-300"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800 dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </button>
