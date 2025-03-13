@@ -44,17 +44,23 @@
             </button>
             <!-- Navigation links -->
             <div class="hidden md:flex space-x-8">
+              <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Home</a>
+              <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">About</a>
+              <a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Education</a>
               <a href="#work" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Work</a>
               <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Projects</a>
-              <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">About</a>
+              <a href="#community" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Community</a>
             </div>
           </div>
         </div>
         <div v-show="isMobileMenuOpen" class="md:hidden py-4">
           <div class="flex flex-col space-y-4">
+            <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Home</a>
+            <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">About</a>
+            <a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Education</a>
             <a href="#work" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Work</a>
             <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Projects</a>
-            <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">About</a>
+            <a href="#community" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">Community</a>
           </div>
         </div>
       </div>
@@ -122,7 +128,7 @@
     </section>
 
     <!-- Education Section -->
-    <section class="py-20">
+    <section id="education" class="py-20">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Education</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -194,6 +200,42 @@
                     <li>Special Topics in Computer Science & Security</li>
                     <li>Technopreneurship</li>
                   </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="mt-12">
+          <h3 class="text-2xl font-bold text-center text-gray-800 dark:text-white mb-8">Certificates</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- MySQL Certificate -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transition-shadow duration-300">
+              <div class="flex flex-col gap-4">
+                <img 
+                  src="/images/mysql.png" 
+                  alt="MySQL Certificate" 
+                  class="w-full h-48 object-contain"
+                />
+                <div class="text-center">
+                  <h4 class="text-xl font-bold text-gray-800 dark:text-white">MySQL Tutorial</h4>
+                  <p class="text-gray-600 dark:text-gray-400">Great Learning</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- PHP Certificate -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 hover:shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] transition-shadow duration-300">
+                <div class="flex flex-col gap-4">
+                <img 
+                  src="/images/phpbeg.png" 
+                  alt="PHP Certificate" 
+                  class="w-full h-48 object-contain"
+                />
+                <div class="text-center">
+                  <h4 class="text-xl font-bold text-gray-800 dark:text-white">PHP for Beginners</h4>
+                  <p class="text-gray-600 dark:text-gray-400">Great Learning</p>
                 </div>
               </div>
             </div>
@@ -389,8 +431,100 @@
       </div>
     </section>
 
+    <!-- Side Projects Section -->
+    <section class="py-20 dark:bg-gray-800 transition-colors duration-300">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Side Projects</h2>
+        <div class="space-y-8">
+          <!-- Tournament Organization -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 hover:shadow-[0_20px_50px_rgba(59,_130,_246,_0.7)] transition-shadow duration-300">
+            <div class="flex flex-col md:flex-row gap-8">
+              <img 
+                src="/images/vustadz.png" 
+                alt="Tournament Organization" 
+                class="w-full md:w-1/2 h-64 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+                @click="openImage('/images/vustadz.png')"
+              />
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">VUSTADZ VALORANT Tournament Committee Leader</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-6">
+                  Led and organized  Valorant tournaments for VTuber communities, managing event logistics, team registrations, and broadcast coordination.
+                </p>
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-800 dark:text-gray-300">Event Management</span>
+                    <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-800 dark:text-gray-300">Tournament Organization</span>
+                    <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-800 dark:text-gray-300">Team Coordination</span>
+                  </div>
+                  <div class="flex gap-4">
+                    <a 
+                      href="https://www.youtube.com/watch?v=LamHVev8I78&list=PLG3lZkEkP2Youwm4uLWuW7LQEFgi281wq" 
+                      target="_blank" 
+                      class="inline-flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors duration-300"
+                    >
+                      <i class="fab fa-youtube mr-2"></i>
+                      Tournament Playlist
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Graphic Design -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8 hover:shadow-[0_20px_50px_rgba(59,_130,_246,_0.7)] transition-shadow duration-300">
+            <div class="flex flex-col gap-8">
+              <!-- Title and Description -->
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Poster & Graphics Design</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-6">
+                  Created promotional materials, event posters, and social media graphics for community events. Designs include event schedules and team introductions.
+                </p>
+              </div>
+
+              <!-- Images Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-lg">
+                  <img 
+                    src="/images/1.png" 
+                    alt="Poster Design 1" 
+                    class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+                    @click="openImage('/images/1.png')"
+                  />
+                </div>
+                <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-lg">
+                  <img 
+                    src="/images/2.png" 
+                    alt="Poster Design 2" 
+                    class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+                    @click="openImage('/images/2.png')"
+                  />
+                </div>
+                <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-lg">
+                  <img 
+                    src="/images/3.png" 
+                    alt="Poster Design 3" 
+                    class="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
+                    @click="openImage('/images/3.png')"
+                  />
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-800 dark:text-gray-300">Graphic Design</span>
+                <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-800 dark:text-gray-300">Canva</span>
+                <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-800 dark:text-gray-300">Social Media</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Community & Organization Experience -->
-    <section class="py-20">
+    <section id="community" class="py-20 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Community & Organization Experience</h2>
         <div class="space-y-12">
@@ -600,6 +734,19 @@
         <p class="mt-4 text-sm text-gray-500">Copyright © 2024</p>
       </div>
     </footer>
+
+    <!-- Add Image Modal -->
+    <div v-if="selectedImage" 
+         class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+         @click="selectedImage = null">
+      <div class="max-w-4xl w-full mx-4">
+        <img 
+          :src="selectedImage" 
+          class="w-full h-auto rounded-lg"
+          alt="Selected poster design"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -613,6 +760,7 @@ const isLoading = ref(true)
 const loadingScreen = ref(null)
 const isMobileMenuOpen = ref(false)
 const isDarkMode = ref(false)
+const selectedImage = ref(null)
 
 // Initialize dark mode from localStorage
 onMounted(() => {
@@ -631,6 +779,11 @@ onMounted(() => {
   setTimeout(() => {
     loadingScreen.value?.startTransition()
   }, 3000)
+
+  // Add click handlers to all navigation links
+  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', handleNavClick)
+  })
 })
 
 const toggleDarkMode = () => {
@@ -660,6 +813,31 @@ const handleLoadingComplete = () => {
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+
+const openImage = (imagePath) => {
+  selectedImage.value = imagePath
+}
+
+// Add this function to handle smooth scrolling
+const handleNavClick = (event) => {
+  // Close mobile menu if it's open
+  isMobileMenuOpen.value = false
+  
+  // Get the href attribute
+  const href = event.currentTarget.getAttribute('href')
+  
+  // If it's a hash link
+  if (href.startsWith('#')) {
+    event.preventDefault()
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
 }
 </script>
 
