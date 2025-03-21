@@ -8,7 +8,6 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
-            publicDirectory: 'public',
         }),
         vue({
             template: {
@@ -23,9 +22,10 @@ export default defineConfig({
         outDir: 'dist',
         assetsDir: 'assets',
         emptyOutDir: true,
-        manifest: true,
         rollupOptions: {
-            input: 'resources/js/app.js'
+            input: {
+                main: resolve(__dirname, 'index.html')
+            }
         }
     },
     resolve: {
