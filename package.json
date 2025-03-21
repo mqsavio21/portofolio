@@ -2,8 +2,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "build": "vite build && xcopy /E /I /Y public\\index.php dist\\ && xcopy /E /I /Y public\\images dist\\images && if exist public\\fonts xcopy /E /I /Y public\\fonts dist\\fonts",
+        "preview": "vite preview"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^5.2.1",
