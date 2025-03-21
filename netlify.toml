@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "public"
+  publish = "dist"
 
 [[redirects]]
   from = "/*"
@@ -9,7 +9,4 @@
 
 [build.environment]
   NODE_VERSION = "18"
-  NPM_VERSION = "9"
-
-[[plugins]]
-  package = "@netlify/plugin-laravel" 
+  NPM_VERSION = "9" 
