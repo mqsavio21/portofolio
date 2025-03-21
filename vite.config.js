@@ -5,29 +5,19 @@ import { resolve } from 'path';
 
 export default defineConfig({
     plugins: [
+        vue(),
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
-        }),
-        vue({
-            template: {
-                transformAssetUrls: {
-                    base: null,
-                    includeAbsolute: false,
-                }
-            }
         })
     ],
     build: {
         outDir: 'dist',
-        assetsDir: '',
+        assetsDir: 'assets',
         emptyOutDir: true,
         rollupOptions: {
-            input: 'index.html',
-            output: {
-                entryFileNames: '[name].[hash].js',
-                chunkFileNames: '[name].[hash].js',
-                assetFileNames: '[name].[hash][extname]'
+            input: {
+                app: resolve(__dirname, 'index.html')
             }
         }
     },
