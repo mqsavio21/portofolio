@@ -4,8 +4,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "build:netlify": "vite build && npm run copy-assets",
-        "copy-assets": "mkdir -p dist/resources && cp -r resources/css dist/resources/ && cp -r resources/js dist/resources/ && mkdir -p dist/images && cp -r public/images/* dist/images/ && cp -r public/fonts dist/ || true",
+        "build:netlify": "vite build && npm run copy-public",
+        "copy-public": "cp -r public/images dist/ && cp -r public/fonts dist/ || true",
         "preview": "vite preview"
     },
     "devDependencies": {
