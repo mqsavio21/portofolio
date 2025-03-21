@@ -3,8 +3,10 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build && npm run copy-files",
-        "copy-files": "mkdir -p dist/images dist/fonts && cp public/index.php dist/ && cp -r public/images/* dist/images/ && [ -d \"public/fonts\" ] && cp -r public/fonts/* dist/fonts/ || echo \"No fonts directory\"",
+        "build": "vite build && npm run copy-files:windows",
+        "build:netlify": "vite build && npm run copy-files:linux",
+        "copy-files:windows": "if not exist dist mkdir dist && robocopy public dist /E /NFL /NDL /NJH /NJS /nc /ns /np || exit 0",
+        "copy-files:linux": "mkdir -p dist && cp -r public/* dist/",
         "preview": "vite preview"
     },
     "devDependencies": {

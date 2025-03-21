@@ -1,9 +1,10 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm install && npm run build:netlify"
   publish = "dist"
-  environment = { NODE_VERSION = "18", NPM_VERSION = "9.9.4" }
 
 [build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "9.9.4"
   CI = "true"
   SHELL = "/bin/bash"
 
@@ -14,7 +15,7 @@
 
 [[headers]]
   for = "/*"
-  [headers.values]
+    [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff" 
