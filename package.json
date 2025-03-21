@@ -5,8 +5,8 @@
         "dev": "vite",
         "build": "vite build && npm run copy-files:windows",
         "build:netlify": "vite build && npm run copy-files:linux",
-        "copy-files:windows": "if not exist dist mkdir dist && robocopy public dist /E /NFL /NDL /NJH /NJS /nc /ns /np || exit 0",
-        "copy-files:linux": "mkdir -p dist && cp -r public/* dist/",
+        "copy-files:windows": "if not exist dist\\images mkdir dist\\images && robocopy public\\images dist\\images /E /NFL /NDL /NJH /NJS /nc /ns /np || exit 0",
+        "copy-files:linux": "mkdir -p dist/images && cp -r public/images/* dist/images/",
         "preview": "vite preview"
     },
     "devDependencies": {

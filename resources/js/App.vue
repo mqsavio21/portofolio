@@ -70,7 +70,7 @@
     <section id="home" class="relative pt-32 pb-20 text-center">
       <div class="absolute inset-0 z-0">
         <img 
-          src="/images/bghero.jpg" 
+          :src="'/images/bghero.jpg'"
           alt="Background" 
           class="w-full h-full object-cover"
         />
@@ -79,7 +79,7 @@
       <div class="relative z-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedHeroText />
         <img 
-          src="/images/official.jpg" 
+          :src="'/images/official.jpg'"
           alt="Profile" 
           class="rounded-full w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto mb-12 shadow-lg object-cover border-4 border-white"
         />
