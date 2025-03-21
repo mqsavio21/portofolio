@@ -3,7 +3,8 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build && xcopy /E /I /Y public\\index.php dist\\ && xcopy /E /I /Y public\\images dist\\images && if exist public\\fonts xcopy /E /I /Y public\\fonts dist\\fonts",
+        "build": "vite build && npm run copy-files",
+        "copy-files": "xcopy /E /I /Y public\\index.php dist\\ && xcopy /E /I /Y public\\images dist\\images && if exist public\\fonts xcopy /E /I /Y public\\fonts dist\\fonts",
         "preview": "vite preview"
     },
     "devDependencies": {
