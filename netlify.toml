@@ -3,6 +3,10 @@
   publish = "dist"
   environment = { NODE_VERSION = "18", NPM_VERSION = "9.9.4" }
 
+[build.environment]
+  CI = "true"
+  SHELL = "/bin/bash"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
