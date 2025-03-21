@@ -17,4 +17,13 @@ export default defineConfig({
             }
         })
     ],
+    build: {
+        outDir: 'public/build',
+        manifest: true,
+        rollupOptions: {
+            output: {
+                manualChunks: undefined
+            }
+        }
+    }
 });
