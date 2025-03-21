@@ -7,6 +7,6 @@ Route::get('/', function () {
 });
 
 // This catch-all route ensures your SPA works with direct URL access
-Route::get('{any}', function () {
+Route::get('/{any}', function () {
     return view('app');
 })->where('any', '.*');

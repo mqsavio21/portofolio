@@ -6,6 +6,7 @@
   NODE_VERSION = "18"
   NPM_VERSION = "9.9.4"
   CI = "true"
+  PHP_VERSION = "8.1"
 
 [[redirects]]
   from = "/*"
@@ -23,6 +24,6 @@
     Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.cloudflare.com fonts.googleapis.com fonts.gstatic.com; img-src 'self' data: blob: *.cloudflare.com; style-src 'self' 'unsafe-inline' *.cloudflare.com fonts.googleapis.com; font-src 'self' fonts.gstatic.com fonts.googleapis.com; connect-src 'self';"
 
 [[headers]]
-  for = "/assets/*"
+  for = "/build/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable" 
