@@ -15,11 +15,13 @@ export default defineConfig({
         outDir: 'dist',
         assetsDir: 'assets',
         emptyOutDir: true,
+        sourcemap: false,
         rollupOptions: {
             input: {
-                app: resolve(__dirname, 'index.html')
+                main: resolve(__dirname, 'index.html')
             },
             output: {
+                manualChunks: undefined,
                 assetFileNames: (assetInfo) => {
                     let extType = assetInfo.name.split('.')[1];
                     if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
@@ -27,7 +29,7 @@ export default defineConfig({
                     } else if (/woff|woff2/i.test(extType)) {
                         extType = 'fonts';
                     }
-                    return `assets/${extType}/[name][extname]`;
+                    return `assets/${extType}/[name]-[hash][extname]`;
                 },
                 chunkFileNames: 'assets/js/[name]-[hash].js',
                 entryFileNames: 'assets/js/[name]-[hash].js',
@@ -40,5 +42,6 @@ export default defineConfig({
             '~': resolve(__dirname, './public')
         }
     },
-    publicDir: 'public'
+    publicDir: 'public',
+    base: '/'
 });

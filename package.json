@@ -3,10 +3,10 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build && npm run copy-files:windows",
+        "build": "vite build",
         "build:netlify": "vite build && npm run copy-files:linux",
         "copy-files:windows": "if not exist dist\\images mkdir dist\\images && robocopy public\\images dist\\images /E /NFL /NDL /NJH /NJS /nc /ns /np || exit 0",
-        "copy-files:linux": "mkdir -p dist/images && cp -r public/images/* dist/images/",
+        "copy-files:linux": "mkdir -p dist/images && cp -r public/images/* dist/images/ || true",
         "preview": "vite preview"
     },
     "devDependencies": {

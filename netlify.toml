@@ -6,7 +6,6 @@
   NODE_VERSION = "18"
   NPM_VERSION = "9.9.4"
   CI = "true"
-  SHELL = "/bin/bash"
 
 [[redirects]]
   from = "/*"
@@ -20,8 +19,8 @@
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
-    Cache-Control = "no-cache"
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.cloudflare.com *.netlify.app; img-src 'self' data: blob: *.cloudflare.com; style-src 'self' 'unsafe-inline' *.cloudflare.com fonts.googleapis.com; font-src 'self' fonts.gstatic.com fonts.googleapis.com; connect-src 'self' *.netlify.app;"
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' 'unsafe-eval' *.cloudflare.com fonts.googleapis.com fonts.gstatic.com; img-src 'self' data: blob: *.cloudflare.com; style-src 'self' 'unsafe-inline' *.cloudflare.com fonts.googleapis.com; font-src 'self' fonts.gstatic.com fonts.googleapis.com; connect-src 'self';"
 
 [[headers]]
   for = "/assets/*"
