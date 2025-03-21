@@ -1,7 +1,7 @@
 <template>
   <div class="loading-screen" :class="{ 'fade-out': isComplete }">
     <div class="loading-content">
-      <h1 class="loading-text">Welcome to mqsavio Portfolio</h1>
+      <h1 class="loading-text">Welcome to My Portfolio</h1>
     </div>
   </div>
 </template>
