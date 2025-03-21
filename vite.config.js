@@ -20,16 +20,14 @@ export default defineConfig({
     ],
     build: {
         outDir: 'dist',
-        assetsDir: 'assets',
+        assetsDir: '',
         emptyOutDir: true,
         rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'index.html')
-            },
+            input: 'index.html',
             output: {
-                entryFileNames: 'assets/[name].js',
-                chunkFileNames: 'assets/[name].js',
-                assetFileNames: 'assets/[name].[ext]'
+                entryFileNames: '[name].[hash].js',
+                chunkFileNames: '[name].[hash].js',
+                assetFileNames: '[name].[hash][extname]'
             }
         }
     },
@@ -38,5 +36,6 @@ export default defineConfig({
             '@': resolve(__dirname, './resources'),
             '~': resolve(__dirname, './public')
         }
-    }
+    },
+    base: './'
 });
